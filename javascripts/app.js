@@ -13,7 +13,7 @@ angular.module('sortApp', [])
     { rank: 5, city: 'Dallas', gdp: 504858 },
     { rank: 6, city: 'WashingTon DC', gdp: 471584 },
     { rank: 7, city: 'San Francisco', gdp: 411969 },
-    { rank: 8, city: 'Philadelphia', gdp: 391118 },
+    { rank: 8, city: 'philadelphia', gdp: 391118 },
     { rank: 9, city: 'Boston', gdp: 382459 },
     { rank: 10, city: 'Atlanta', gdp: 324881 },
     { rank: 11, city: 'Seattle', gdp: 300827 },
