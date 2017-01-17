@@ -55,22 +55,27 @@
 	    </div>  
 
 		<h1>Welcome to Baltimore! Here is the Data Center</h1>
+         <br><br>
+        <div class="alert alert-info">
+           <nav style="text-align:center">
+              <a style="left:50%,font-size: 35px">Here is some information about baltimore's popuations</a>
+           </nav>
+        </div>
+        <br><br><br>
+        <div class="container">
+           <div id="chart"></div>    
+        </div>
+
 	     <div class="alert alert-info">
             <nav style="text-align:center">
-              <a style="left:50%">Here is the simple Demo for the data visualization of top-20 people who earned most in Baltimore</a>
+              <a style="left:50%">Here is the data visualization of top-20 people who earned most in Baltimore</a>
             </nav>
           </div>
-
-        <br><br><br>
-    	<div class="container">
-    		<div id="chart"></div>    
-    	</div>
          
          <br><br><br>
         <div class="container">
     		<div id="chart_salary"></div>
     	</div>
-
 
          <br><br><br>
          <h1>Now, you can explore your interested data by yourself</h1>
@@ -81,9 +86,6 @@
           </div>
 
         
-          <!--<div id='mydiv' style="width:400px">
-              <canvas id="myChart1" width="400" height="400"></canvas>
-          </div>-->
 
      <table class="columns">
       <tr>
@@ -91,13 +93,18 @@
         <td><div id="p2" style="border: 1px solid #ccc"></div></td>
         <td><div id="p3" style="border: 1px solid #ccc"></div></td>
       </tr>
-    </table>
-        <br><br>
-		<div class="alert alert-info">
-            <nav style="text-align:center">
+     </table>
+
+     <br>
+        <div class="container">
+    		<div id="chart3"></div>
+    	</div>
+     <br><br>
+     <div class="alert alert-info">
+           <nav style="text-align:center">
               <a style="left:50%,font-size: 35px">Here is more information about cities' GDP, check baltimore information!</a>
-            </nav>
-          </div>
+           </nav>
+     </div>
       <div class="container" ng-app="sortApp" ng-controller="mainController">
   
            <div class="alert alert-info">
@@ -155,6 +162,8 @@
 
 
       <script src="javascripts/create-graph2.js"></script>
+      <script src="javascripts/create_graph3.js"></script>
+      <script src="javascripts/create_graph4.js"></script>
       <script src="javascripts/drawcharts_google.js"></script>
       <br><br>
 	  <p class="test"><a href="https://data.baltimorecity.gov/">Baltimore Data Center</a></p>

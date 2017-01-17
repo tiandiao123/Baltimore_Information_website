@@ -73,7 +73,7 @@ google.charts.load('current', {'packages':['corechart']});
         var options = {
           title: 'MaryLand nad Baltimore GDP(billion dollars) ',
           hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
+          vAxis: {minValue: 1}
         };
 
         var chart = new google.visualization.AreaChart(document.getElementById('p3'));
