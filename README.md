@@ -1,24 +1,16 @@
-# graphs-from-csv
+# Baltimore Data Visualization
+Name: Cuiqing Li
 
-An example repository for creating website graphs from CSV files. This repository uses c3.js and PapaParse.
+Time:1/17/2017
 
 ### Graph/Chart Library
 c3.js: http://c3js.org/
+https://developers.google.com/chart/
 
 ### CSV/JSON Parsing Library
 PapaParse: http://papaparse.com/
 
-### Only Requirement
-You need a web server. I used python to initiate a web server.
 
-```
-python --version
-Python 2.7.10
-```
+To test the codes, we need a web server(I used python to initiate a web server). For example type: python -m SimpleHTTPServer in this directory. Then open a webbrowser to type localhost:8000 to see my webpage! This webpage has been tested in Chrome!
 
-```
-cd graphs-from-csv/
-python -m SimpleHTTPServer
-```
 
-Visit http://localhost:8000 to see the website.
