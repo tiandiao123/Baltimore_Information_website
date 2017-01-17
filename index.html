@@ -1,0 +1,157 @@
+
+<!DOCTYPE	html>
+<!-- Table Fun -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Baltimore Data Show</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/AdRotator.css">
+	    <script src="javascripts/AdRotator.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        
+       
+        <link rel='stylesheet' href='stylesheets/style.css' />
+		<link rel='stylesheet' href='stylesheets/bootstrap.min.css' />
+		<link rel='stylesheet' href='stylesheets/font-awesome.min.css' />
+
+		<!-- Load c3.css -->
+		<link href="stylesheets/c3.css" rel="stylesheet" type="text/css">
+
+		<!-- Load d3.js and c3.js -->
+		<script src="javascripts/d3.v3.min.js" charset="utf-8"></script>
+		<script src="javascripts/c3.min.js"></script>
+
+		<!-- Load papaparse.js -->
+		<script src="javascripts/papaparse.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script src="javascripts/app.js"></script>
+
+
+	</head>
+   
+	<body onload="imageanimation()">
+
+
+    
+        <div id="imagesetting">
+        	  
+              <div id="leftslide"></div>
+              <div id="rightslide"></div>
+             <span class="coupontooltip" id="tooltip"></span>
+        </div>
+
+
+	    <div class="buttons">
+	          <img src="files/bullet_blue.png" id="button1" onmouseenter="OnMouseIn (this)" onmouseleave="OnMouseOut (this)">
+              <img src="files/bullet_gray.png" id="button2" onmouseenter="OnMouseIn (this)" onmouseleave="OnMouseOut (this)">
+              <img src="files/bullet_gray.png" id="button3" onmouseenter="OnMouseIn (this)" onmouseleave="OnMouseOut (this)">
+	    </div>  
+
+		<h1>Welcome to Baltimore! Here is the Data Center</h1>
+	     <div class="navigation">
+            <nav>
+              <a>Here is the simple Demo for the data visualization of top-20 people who earned most in Baltimore</a>
+            </nav>
+          </div>
+
+        <br><br><br>
+    	<div class="container">
+    		<div id="chart"></div>
+    	</div>
+         
+         <br><br><br>
+        <div class="container">
+    		<div id="chart_salary"></div>
+    	</div>
+
+
+         <br><br><br>
+         <h1>Now, you can explore your interested data by yourself</h1>
+	     <div class="navigation">
+            <nav>
+              <a>The data for the economy of Baltimore</a>
+            </nav>
+          </div>
+
+        
+          <!--<div id='mydiv' style="width:400px">
+              <canvas id="myChart1" width="400" height="400"></canvas>
+          </div>-->
+
+     <table class="columns">
+      <tr>
+        <td><div id="p1" style="border: 1px solid #ccc"></div></td>
+        <td><div id="p2" style="border: 1px solid #ccc"></div></td>
+        <td><div id="p3" style="border: 1px solid #ccc"></div></td>
+      </tr>
+    </table>
+        <br><br>
+		<div class="navigation">
+            <nav>
+              <a>Here is more information about cities' GDP, check baltimore information!</a>
+            </nav>
+          </div>
+      <div class="container" ng-app="sortApp" ng-controller="mainController">
+  
+           <div class="alert alert-info">
+                 <p>Sort Type: {{ sortType }}</p>
+                 <p>Sort Reverse: {{ sortReverse }}</p>
+                 <p>Search Query: {{ searchFish }}</p>
+           </div>
+  
+             <table class="table table-bordered table-striped">
+    
+             <thead>
+                  <tr>
+                  <td>
+                     <a href="#" ng-click="sortType = 'name'">
+                        Sushi Roll 
+                        <span ng-show="sortType == 'name'" class="fa fa-caret-down"></span>
+                     </a> 
+                  </td>
+                  <td>
+                    <a href="#" ng-click="sortType = 'fish'">
+                        <span ng-show="sortType == 'fish'" class="fa fa-caret-down"></span>
+                        Fish Type 
+                    </a> 
+                  </td>
+                  <td>
+                     <a href="#" ng-click="sortType = 'tastiness'">
+                       <span ng-show="sortType == 'tastiness'" class="fa fa-caret-down"></span>
+                       Taste Level 
+                     </a> 
+                  </td>
+                </tr>
+            </thead>
+    
+           <tbody>
+             <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse">
+                 <td>{{ roll.name }}</td>
+                 <td>{{ roll.fish }}</td>
+                 <td>{{ roll.tastiness }}</td>
+             </tr>
+           </tbody>
+    
+          </table>
+  
+      </div>
+
+
+      <script src="javascripts/create-graph2.js"></script>
+      <script src="javascripts/drawcharts_google.js"></script>
+      <br><br>
+	  <p class="test"><a href="https://data.baltimorecity.gov/">Baltimore Data Center</a></p>
+	  <p class="test"><a href="https://nycopendata.socrata.com/">NYU Data Center</a></p>
+      <p class="test"><a href="https://data.austintexas.gov/browse">Austin Data Center</a></p>			
+	</body>
+   
+</html>
+
+
