@@ -5,7 +5,8 @@ Time:1/17/2017
 
 ### Graph/Chart Library
 c3.js: http://c3js.org/
-https://developers.google.com/chart/
+
+Google Charts:https://developers.google.com/chart/
 
 ### CSV/JSON Parsing Library
 PapaParse: http://papaparse.com/
