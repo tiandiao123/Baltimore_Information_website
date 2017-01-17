@@ -103,39 +103,49 @@
            <div class="alert alert-info">
                  <p>Sort Type: {{ sortType }}</p>
                  <p>Sort Reverse: {{ sortReverse }}</p>
-                 <p>Search Query: {{ searchFish }}</p>
+                 <p>Search Query: {{ searchCities }}</p>
            </div>
+
+           <form>
+               <div class="form-group">
+                   <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                           <input type="text" class="form-control" placeholder="Type The cities you are interested in" ng-model="searchCities">
+
+                        </div>      
+                   </div>
+          </form>
   
              <table class="table table-bordered table-striped">
     
              <thead>
                   <tr>
                   <td>
-                     <a href="#" ng-click="sortType = 'name'">
-                        Sushi Roll 
-                        <span ng-show="sortType == 'name'" class="fa fa-caret-down"></span>
+                     <a href="#" ng-click="sortType = 'rank'; sortReverse = !sortReverse">
+                        Rank 
+                        <span ng-show="sortType == 'rank'" class="fa fa-caret-down"></span>
                      </a> 
                   </td>
                   <td>
-                    <a href="#" ng-click="sortType = 'fish'">
-                        <span ng-show="sortType == 'fish'" class="fa fa-caret-down"></span>
-                        Fish Type 
+                    <a href="#" ng-click="sortType = 'city'; sortReverse = !sortReverse">
+                        <span ng-show="sortType == 'city'" class="fa fa-caret-down"></span>
+                        City Name 
                     </a> 
                   </td>
                   <td>
-                     <a href="#" ng-click="sortType = 'tastiness'">
-                       <span ng-show="sortType == 'tastiness'" class="fa fa-caret-down"></span>
-                       Taste Level 
+                     <a href="#" ng-click="sortType = 'gdp'; sortReverse = !sortReverse">
+                       <span ng-show="sortType == 'gdp'" class="fa fa-caret-down"></span>
+                       GDP in million dollars(2014) 
                      </a> 
                   </td>
                 </tr>
             </thead>
     
            <tbody>
-             <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse">
-                 <td>{{ roll.name }}</td>
-                 <td>{{ roll.fish }}</td>
-                 <td>{{ roll.tastiness }}</td>
+             <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse |filter:searchCities">
+                 <td>{{ roll.rank }}</td>
+                 <td>{{ roll.city }}</td>
+                 <td>{{ roll.gdp }}</td>
              </tr>
            </tbody>
     

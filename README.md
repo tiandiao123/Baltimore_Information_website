@@ -12,6 +12,6 @@ Google Charts:https://developers.google.com/chart/
 PapaParse: http://papaparse.com/
 
 
-To test the codes, we need a web server(I used python to initiate a web server). For example type: python -m SimpleHTTPServer in this directory. Then open a webbrowser to type localhost:8000 to see my webpage! This webpage has been tested in Chrome!
+To test the codes, we need a web server(I used python to initiate a web server). For example type: python -m SimpleHTTPServer in this directory using a terminal. Then open a webbrowser to type localhost:8000 to see my webpage! This webpage has been tested in Chrome!
 
 
