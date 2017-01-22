@@ -33,13 +33,11 @@
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
         <script src="javascripts/app.js"></script>
 
-
+        <script src="http://underscorejs.org/underscore.js"></script>
+        <script src="javascripts/second_table.js"></script>
 	</head>
    
-	<body onload="imageanimation()">
-
-
-    
+	<body onload="imageanimation()">  
         <div id="imagesetting">
         	  
               <div id="leftslide"></div>
@@ -149,7 +147,7 @@
             </thead>
     
            <tbody>
-             <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse |filter:searchCities">
+             <tr ng-repeat="roll in cities_2 | orderBy:sortType:sortReverse |filter:searchCities">
                  <td>{{ roll.rank }}</td>
                  <td>{{ roll.city }}</td>
                  <td>{{ roll.gdp }}</td>
@@ -160,7 +158,7 @@
   
       </div>
 
-
+      <p class="test"><a href="second_page.html">Check Table 2(Data for Baltimore City)</a></p>
       <script src="javascripts/create-graph2.js"></script>
       <script src="javascripts/create_graph3.js"></script>
       <script src="javascripts/create_graph4.js"></script>

@@ -1,17 +1,12 @@
 google.charts.load('current', {'packages':['corechart']});
 
-      // Draw the pie chart for Sarah's pizza when Charts is loaded.
       google.charts.setOnLoadCallback(drawSarahChart);
-
-      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
       google.charts.setOnLoadCallback(drawAnthonyChart);
-
       google.charts.setOnLoadCallback(drawlineChart);
 
-      // Callback that draws the pie chart for Sarah's pizza.
       function drawSarahChart() {
 
-        // Create the data table for Sarah's pizza.
+        
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Cities');
         data.addColumn('number', 'GDP(million in dollar)');
@@ -23,20 +18,18 @@ google.charts.load('current', {'packages':['corechart']});
           ['Salt lake City', 75672]
         ]);
 
-        // Set options for Sarah's pie chart.
+      
         var options = {title:'The GDP comparison with other cities(million dollars)',
                        width:400,
                        height:300};
 
-        // Instantiate and draw the chart for Sarah's pizza.
         var chart = new google.visualization.PieChart(document.getElementById('p1'));
         chart.draw(data, options);
       }
 
-      // Callback that draws the pie chart for Anthony's pizza.
       function drawAnthonyChart() {
 
-        // Create the data table for Anthony's pizza.
+      
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Cities');
         data.addColumn('number', 'GDP');
@@ -48,12 +41,11 @@ google.charts.load('current', {'packages':['corechart']});
           ['Baltimore', 173516]
         ]);
 
-        // Set options for Anthony's pie chart.
+  
         var options = {title:'comparison with some other cities(million dollars)',
                        width:400,
                        height:300};
 
-        // Instantiate and draw the chart for Anthony's pizza.
         var chart = new google.visualization.PieChart(document.getElementById('p2'));
         chart.draw(data, options);
       }
