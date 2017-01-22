@@ -3,7 +3,44 @@ google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawSarahChart);
       google.charts.setOnLoadCallback(drawAnthonyChart);
       google.charts.setOnLoadCallback(drawlineChart);
+      google.charts.setOnLoadCallback(drawChart);
 
+
+     function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'white', 'Black', 'Asian'],
+          ['2014', 1000, 400, 200],
+          ['2015', 1170, 460, 250],
+          ['2016', 660, 1120, 300],
+          ['2017', 1030, 540, 350]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Baltimore education information by race',
+            subtitle: 'the number of people who have degrees',
+          },
+          bars: 'vertical',
+          vAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+        var btns = document.getElementById('btn-group');
+
+        btns.onclick = function (e) {
+
+          if (e.target.tagName === 'BUTTON') {
+            options.vAxis.format = e.target.id === 'none' ? '' : e.target.id;
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+          }
+        }
+      }
+      
       function drawSarahChart() {
 
         
@@ -71,4 +108,6 @@ google.charts.load('current', {'packages':['corechart']});
         var chart = new google.visualization.AreaChart(document.getElementById('p3'));
         chart.draw(data, options);
       }
+
+
 
