@@ -3,10 +3,10 @@ google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawSarahChart);
       google.charts.setOnLoadCallback(drawAnthonyChart);
       google.charts.setOnLoadCallback(drawlineChart);
-      google.charts.setOnLoadCallback(drawChart);
+      //google.charts.setOnLoadCallback(drawChart);
 
 
-     function drawChart() {
+     /*function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Year', 'white', 'Black', 'Asian'],
           ['2014', 1000, 400, 200],
@@ -39,7 +39,7 @@ google.charts.load('current', {'packages':['corechart']});
             chart.draw(data, google.charts.Bar.convertOptions(options));
           }
         }
-      }
+      }*/
       
       function drawSarahChart() {
 

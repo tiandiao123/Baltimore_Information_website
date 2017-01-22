@@ -20,8 +20,8 @@ function createGraph2(data) {
 		unemployment.push(data[i][1]);
 	}
 
-	console.log(time);
-	console.log(unemployment);
+	//console.log(time);
+	//console.log(unemployment);
 
 	var chart = c3.generate({
 		bindto: '#chart3',
