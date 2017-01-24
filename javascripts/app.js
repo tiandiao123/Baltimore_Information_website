@@ -4,7 +4,7 @@ angular.module('sortApp', [])
   $scope.sortType     = 'rank'; // set the default sorttype
   $scope.sortReverse  = false;  // set the default sortorder
   $scope.searchCities   = '';     // set the default search
-   
+    
   $scope.cities_2 = [
     { rank: 1, city: 'New York', gdp: 1558518 },
     { rank: 2, city: 'Los Angeles', gdp: 866745},
