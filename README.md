@@ -12,7 +12,7 @@ Google Charts:https://developers.google.com/chart/
 PapaParse: http://papaparse.com/
 
 
-To test the codes, we need a web server(I used python to initiate a web server). For example type: python -m SimpleHTTPServer in this directory using a terminal. Then open a webbrowser to type localhost:8000 to see my webpage! This webpage has been tested in Chrome!
+To test the codes, we need a web server(I used python to initiate a web server). For example type: python -m SimpleHTTPServer in this directory using a terminal. Then open a webbrowser to type localhost:8000 to see my webpage! This webpage has been tested in Chrome! (In this case, I used Node.js command prompt to type my command: python -m SimpleHTTPServer to get the server working, and I am still trying to figure out why C3.js couldn't be loaded if I don't type my command in the terminal!)
 
 ###For User's side: 
 You can search Baltimore data you are interested in this website. There are many kinds of useful data in this website such as economy, population and City's recent unemployment rate. 
