@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="mapsApp">
+<head>
+<meta charset="ISO-8859-1">
+          <title>Insert title here</title>
+		  <link rel="stylesheet" href="stylesheets/map.css">
+		  <link rel='stylesheet' href='stylesheets/style.css'/>
+		  <script
+  		  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+		  <script
+  		  src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+          <script type="text/javascript" src="javascripts/map.js"></script>
+          <link rel="stylesheet" type="text/css" href="stylesheets/AdRotator.css">
+	      <script src="javascripts/AdRotator.js"></script>
+
+	      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+<body onload="imageanimation()">
+       <div id="imagesetting">
+        	  
+              <div id="leftslide"></div>
+              <div id="rightslide"></div>
+             <span class="coupontooltip" id="tooltip"></span>
+        </div>
+
+
+	    <div class="buttons">
+	          <img src="files/bullet_blue.png" id="button1" onmouseenter="OnMouseIn (this)" onmouseleave="OnMouseOut (this)">
+              <img src="files/bullet_gray.png" id="button2" onmouseenter="OnMouseIn (this)" onmouseleave="OnMouseOut (this)">
+              <img src="files/bullet_gray.png" id="button3" onmouseenter="OnMouseIn (this)" onmouseleave="OnMouseOut (this)">
+	    </div>  
+
+	    <p class="test"><a href="index.html">Go back to homepage(Click me!)</a></p>
+        <h1>Welcome to Baltimore! Here is the Data Center</h1>
+         <br><br>
+        <div class="alert alert-info">
+           <nav style="text-align:center">
+              <a style="left:50%,font-size: 35px">Here is the map of Baltimore</a>
+           </nav>
+        </div>
+<div ng-controller="MapCtrl" id="map_section">
+    <div id="map"></div>
+    <div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+         <a id="country_container" href="#" ng-click="openInfoWindow($event, marker)">
+         <label id="names" >{{marker.title}}</label></a>
+    </div>
+</div>
+</body>
+</html>
